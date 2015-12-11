@@ -107,7 +107,7 @@
 			}
 
 			if(typeof safari !=="undefined" ){ // handle non-a[download] safari as best we can:
-				url="data:"+url.replace(/^data:([\w\/\-\+]+)/, u);
+				url=url.replace(/^data:([\w\/\-\+]+)/, u);
 				if(!window.open(url)){ // popup blocked, offer direct download:
 					if(confirm("Displaying New Document\n\nUse Save As... to download, then click back to return to this page.")){ location.href=url; }
 				}
